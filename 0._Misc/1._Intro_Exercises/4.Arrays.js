@@ -5,8 +5,8 @@
 
 const letters = ["a", "b", "c"];
 // show b in the console
-console.log('Exercise 1')
-console.log(letters[1])
+console.log('Exercise 1');
+console.log(letters[1]);
 
 // --------------------------------------
 // Exercise 2 - Array Positioning
@@ -15,8 +15,13 @@ const friends = [];
 
 // What a lonely array. Add at least 3 friend objects to it.  
 
-console.log('Exercise 2')
-friends.push('Peter', 'Simon', 'Anna')
+//console.log('Exercise 2')
+const henriette = {
+    name: "henriette",
+    age: 26
+};
+
+friends.push(henriette)
 console.log(friends)
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
@@ -36,7 +41,7 @@ const diet = ["tomato", "cucumber", "rocket"];
 
 // You are a programmer. In one line (one statement) insert hamburger, soda and pizza between the elements cucumber and rocket
 
-console.log('Exercise 4')
+// console.log('Exercise 4')
 diet.splice(2, 0, 'hamburger', 'soda', 'pizza')
 console.log(diet)
 
@@ -55,7 +60,7 @@ console.log(diet)
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 console.log('Exercise 6')
-dinnerTray = diet.slice()
+const dinnerTray = diet.slice()
 console.log(dinnerTray)
 
 // --------------------------------------
