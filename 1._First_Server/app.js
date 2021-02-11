@@ -8,4 +8,14 @@ app.get("/", (req, res) => {
     res.send({ message: "This is my response" });
 });
 
+app.get("/", (req, res) => {
+
+    res.send({ message: "This is my response" })
+})
+
+app.get("/newOne/id", (req, res) => {
+    const id = 1;
+    res.send({ "something": "That you can do" })
+})
+
 app.listen(8080);
