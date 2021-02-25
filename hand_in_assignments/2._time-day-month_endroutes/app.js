@@ -27,7 +27,13 @@ app.get('/month', (req, res) => {
 	res.send(`Current month: ${getCurrentMonth(date.getMonth())}.`)
 })
 
-console.log(date.toLocaleTimeString());
+//console.log(date.toLocaleTimeString('dk-DK', { weekday: 'long' }));
+// const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] ugen starter søndag US tid.
+// app.get("/day", (req, res) => {
+// 	const todaysWeekday = new Date().getDay();
+// 	res.send({ day: weekdays[todaysWeekday]})
+// });
+
 
 function getCurrentDay(a) {
 	let day;

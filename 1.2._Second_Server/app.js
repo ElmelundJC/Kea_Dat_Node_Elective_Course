@@ -20,5 +20,10 @@ app.get("/me", (req, res) => {
     });
 });
 
+app.get('about', (req, res) => {
+    res.json({ "about": 1 })
+});
+
+
 app.listen(8080);
 //define the port to listen on in the bottom, nice and easy to find.
