@@ -1,0 +1,1 @@
+// inside a json object, you want a keypair with key being dependencies and the value being another json object with yet another keypair where the key is the module you want to have and the value being the version
