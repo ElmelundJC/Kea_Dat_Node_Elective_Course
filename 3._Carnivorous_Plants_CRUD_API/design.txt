@@ -1,0 +1,19 @@
+// What http methods and in what order?
+
+// what is a collection in a relational db? table
+
+GET
+/plants
+/plants/id
+
+POST
+/plants
+
+PATCH (PUT - updates the entire resource, and PATCH only updates parts of it)
+/plants/id
+
+DELETE
+/plants/id
+
+
+// create a server that implements the GET methods for plants
