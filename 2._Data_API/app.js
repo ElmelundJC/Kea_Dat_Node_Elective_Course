@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-// **************************** Session 3 *********************************
+// **************************** Session 4 *********************************
 // How do we send data through a GET request? --> through request parameter
 
 // modify the URL so you are sending today as the path variable and 
@@ -22,19 +22,20 @@ app.use(express.json());
 
 // give it the query string value: the best value
 // and return it to the client
-// **************************** Session 3 *********************************
-
 // **************************** Session 4 *********************************
+
+// **************************** Session 5 *********************************
 
 const cat = require("./cat.json");
 
 console.log(cat) // server can on a route calle /cat
 
-// **************************** Session 4 *********************************
 
 app.get('/cat', (req, res) => {
     res.send(cat);
 })
+
+// **************************** Session 5 *********************************
 
 app.get('/querystring', (req, res) => {
     //console.log(query);
