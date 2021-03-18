@@ -10,10 +10,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/welcome/welcome.html');
 });
 
-// PORT=3000 nodemon app.js
-// 1. For Windows people figure out how to define environment variables
-// 2. Console log the defined port
-
 
 // create a new page
 app.get('/dragons', (req, res) => {
@@ -21,11 +17,19 @@ app.get('/dragons', (req, res) => {
 });
 
 
+app.get("/safeport", (req, res) => {
+    res.send({ message: "You are safe here. Nothing can hurt you." });
+});
+
+app.get("/dangerport", (req, res) => {
+    res.redirect("/safeport");
+});
+
 
 app.get("/potato", (req, res) => {
     if (req.query.value === "spud") {
         // Need to return so that line 25 does not execute and try to send another response for the same request
-        return res.send({ type: "petite potato"});
+        return res.send({ type: "petite potato" });
     }
     return res.send({ lifePhilosophy: "My life is potato. I have potato blood in my veins."});
 });
