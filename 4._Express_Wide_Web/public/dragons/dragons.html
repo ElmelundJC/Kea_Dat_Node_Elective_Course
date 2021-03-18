@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dragons.css">
+    <title>Dragons Den</title>
+</head>
+
+<body>
+    <h1>A Big Fat Dragon!</h1>
+
+    <p class="is-puff-here">Puff is Here</p>
+    <a href="/"> This is uncharted territory. Take me back!</a>
+
+
+<div id="grid-container">
+    <div id="1">1</div>
+    <div id="2">2</div>
+    <div id="3">3</div>
+    <div id="4">4</div>
+    <div id="5">5</div>
+    <div id="6">6</div>
+    <div id="7">7</div>
+    <div id="8">8</div>
+    <div id="9">9</div>
+</div>
+
+<!-- JQuery
+        lets us manipulate the DOM through convenient methods 
+        DOM API also allow us to do that
+-->
+<!-- Ajax
+    Asyncronous javaScript and XML 
+    fetching requests async
+
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./dragons.js"></script>
+    <script>
+
+        const dragonImage = `<img id="dragon-img" src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7003445.jpg" alt="a Dragon">`
+
+        $("#1").html(dragonImage);
+
+        $(document).on("click", (event) => {
+            $("#1 #dragon-img").remove();
+            
+        });
+
+        // $("body").css("background-color", "red");
+
+
+         setTimeout(() => {
+        $(".is-puff-here").text("Puff bailed and said 'bye dudes'.");
+        //     window.location.href = "/"
+         }, 5000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.body {
+	background-color: darkslateblue;
+}
+
+#grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+#dragon-img {
+	width: 200px;
+}
