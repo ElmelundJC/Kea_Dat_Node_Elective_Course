@@ -6,8 +6,7 @@ app.use(express.static('public'));
 
 
 
-app.get('/', (req, res) => {
-    //res.sendFile(__dirname + '/public/index/welcome.css');
+app.get('/', (req, res) => { // <-- MADS -->
     res.sendFile(__dirname + '/public/index/welcome.html');
 });
 
