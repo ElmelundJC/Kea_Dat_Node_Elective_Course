@@ -1,0 +1,52 @@
+#maintitel {
+	border: 5px solid #264753;
+	background-color: #fc908e;
+	color: black;
+	text-align: center;
+	padding: 0.7em;
+	margin: 20px auto;
+	font-size: 2.0em;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 800;
+}
+
+h1 a {
+	color: black;
+}
+
+h1 {
+	background-color: #f8a44f;
+	border: 5px solid #264753;
+	color: #000000;
+	padding: 0.7em;
+	width: 300px;
+	font-size: 1.8em;
+	text-align: center;
+	margin: 20px auto;
+	font-family: 'Courier New';
+	font-weight: lighter;
+}
+
+h1:nth-of-type(2n) {
+	background-color: #fafa53;
+}
+
+h1:nth-of-type(3n) {
+	background-color: #75f758;
+}
+
+h1:nth-of-type(4n) {
+	background-color: #56f3f8;
+}
+
+h1:nth-of-type(5n) {
+	background-color: #3639f3;
+}
+
+h1:nth-of-type(6n) {
+	background-color: #c040f7;
+}
+
+h1:nth-of-type(7n) {
+	background-color: #f81c41;
+}
