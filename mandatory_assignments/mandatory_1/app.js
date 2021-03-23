@@ -2,43 +2,45 @@ const express = require("express");
 const app = express();
 
 app.use(express.static('public'));
+// app.use(express.static('public/index'));
+// app.use(express.static('public/weeks'));
 
 
 
 
-app.get('/', (req, res) => { // <-- MADS -->
+app.get('/', (req, res) => { 
     res.sendFile(__dirname + '/public/index/welcome.html');
 });
 
-app.get('/welcome', (req, res) => {
-    res.sendFile(__dirname + '/public/index/welcome.html');
-});
+// app.get('/welcome', (req, res) => {
+//     res.sendFile(__dirname + '/public/index/welcome.html');
+// });
 
-app.get('/week1', (req, res) => {
+app.get('/first', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/first/week1.html');
 });
 
-app.get('/week1', (req, res) => {
+app.get('/second', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/second/week2.html');
 });
 
-app.get('/week1', (req, res) => {
+app.get('/third', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/third/week3.html');
 });
 
-app.get('/week1', (req, res) => {
+app.get('/fourth', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/fourth/week4.html');
 });
 
-app.get('/week1', (req, res) => {
+app.get('/fifth', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/fifth/week5.html');
 });
 
-app.get('/week1', (req, res) => {
+app.get('/sixth', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/sixth/week6.html');
 });
 
-app.get('/week1', (req, res) => {
+app.get('/seventh', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/seventh/week7.html');
 });
 

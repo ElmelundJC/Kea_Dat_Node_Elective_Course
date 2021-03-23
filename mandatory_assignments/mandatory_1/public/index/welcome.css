@@ -28,7 +28,7 @@ h1 {
 }
 
 h1:nth-of-type(2n) {
-	background-color: #fafa53;
+	background-color: #f7f778;
 }
 
 h1:nth-of-type(3n) {
