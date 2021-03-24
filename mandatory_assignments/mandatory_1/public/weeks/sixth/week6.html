@@ -11,5 +11,39 @@
     <div class="topnav">
         <a href="/">Index</a>
     </div>
+    <div class="nodemonImage">
+        <img src="./../images/nodemonLogo.png" alt="">
+    </div>
+    <h1>Sixth Weeks Documentation</h1>
+
+    <section>
+    <h3>Environment Variables</h3>
+    <h4>The Basics</h4>
+    <p>Accessing environment variables in Node.js is supported right out of the box. When your Node.js process boots up it will automatically provide access to all existing environment variables by creating an env object as property of the process global object. If you want to take a peek at the object run the the Node.js REPL with node in your command-line and type:</p>
+    <p><span>"console.log(process.env);"</span></p>
+    <p>This code should output all environment variables that this Node.js process is aware of. To access one specific variable, access it like any property of an object:</p>
+    <p><span>"console.log('The value of PORT is:', process.env.PORT);"</span></p>
+    <p>You should see that the value of PORT is undefined on your computer. Cloud hosts like Heroku or Azure, however, use the PORT variable to tell you on which port your server should listen for the routing to work properly. Therefore, the next time you set up a web server, you should determine the port to listen on by checking PORT first and giving it a default value otherwise:</p>
+    <img id="environmentV" src="./../images/environmentVariables.png" alt="">
+    <br>
+    <p>The highlighted line will take the value of the PORT if it’s available or default to 8080 as a fallback port to listen on. </p>
+    <p>A way to run the application is to install the library <span>"cross-env"</span> by either defining in the package.json value pair to devDependecies, or run the command: <span>"npm install cross-env"</span></p>
+    <p>Inside the package.json file we should define a script and define the name of the script as key and the command for running the script as value</p>
+    <br>
+    <img id="runningEnv" src="./../images/runningEnv.png" alt="">
+    <br>
+    <p>To run the application we would simply type <span>"npm run start-dev"</span> in the terminal</p>
+    </section>
+    <section>
+        <h3>Redirection client & Server-side</h3>
+        <p>The way we can redirect between the pages is simply when creating a new get request in the app.js, we define <span>"res.redirect(/route)"</span></p>
+        
+        <img id="redirect" src="./../images/redirect.png" alt="">
+    </section>
+    <section>
+        <h3>CRUD API complete</h3>
+        <p>Please consider the 4th hand-in assignment as docomentation for a complete CRUD <a href="https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course/tree/main/hand_in_assignments/4._complete_CRUD_API">Link to Github</a></p>
+    </section>
+    
 </body>
 </html>

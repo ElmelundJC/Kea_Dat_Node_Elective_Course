@@ -1,3 +1,49 @@
 body {
 	background-color: #c040f7;
 }
+
+.topnav {
+	border-bottom: 2px solid #4b0f64;
+	width: 100%;
+	margin-left: 10%/6;
+	padding: 10px 0 10px 0;
+}
+
+h1 {
+	text-align: center;
+}
+
+span {
+	font-style: italic;
+	font-weight: bold;
+}
+
+#environmentV {
+	border-radius: 8%;
+	width: 700px;
+	height: 250px;
+	opacity: 0.9;
+}
+
+#runningEnv {
+	border-radius: 8%;
+	width: 700px;
+	height: 250px;
+	opacity: 0.9;
+}
+
+#redirect {
+	border-radius: 8%;
+	width: 700px;
+	height: 250px;
+	opacity: 0.9;
+}
+
+.nodemonImage {
+	margin-top: 10%;
+	position: absolute;
+	margin-left: 36%;
+	text-align: center;
+	opacity: 0.4;
+	background: url(./../images/nodemonLogo.png);
+}

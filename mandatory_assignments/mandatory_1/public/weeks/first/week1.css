@@ -2,23 +2,26 @@ body {
 	background-color: #f8a44f;
 }
 
+.nodemonImage {
+	margin-top: 10%;
+	position: absolute;
+	margin-left: 36%;
+	text-align: center;
+	opacity: 0.4;
+	background: url(./../images/nodemonLogo.png);
+}
+
 h1 {
 	text-align: center;
 }
 
-#container {
-	background-color: bisque;
-	border: 2px solid black;
-	padding-left: 2em;
-	display: flex;
-	flex-direction: row;
+.topnav {
+	border-bottom: 2px solid #805224;
+	width: 100%;
+	margin-left: 10%/6;
+	padding: 10px 0 10px 0;
 }
 
-#container div {
-	width: 500px;
-	height: 100px;
-}
-
-#datatext {
-	text-align: end;
+span {
+	font-style: italic;
 }

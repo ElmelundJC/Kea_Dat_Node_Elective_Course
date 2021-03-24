@@ -3,7 +3,7 @@
 
 const fruits = ["apples", "banana", "blueberries"];
 
-// use map tp print out each fruit
+// use map to print out each fruit
 
 fruits.map(fruit => {
     console.log(fruit);
@@ -18,4 +18,4 @@ const copiedFruits = fruits.map((fruit, index) => {
 });
 console.log(copiedFruits);
 
-// find out what reduce  filter and find works.
+// find out how reduce & filter & find methods works.

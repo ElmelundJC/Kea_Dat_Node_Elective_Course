@@ -52,11 +52,6 @@ app.get('/pathvariable/:message/:title', (req, res) => {
     });
 });
 
-// we are still working with path variables
-// in the same route as above.. give it a title
-// return the message with a title to the client
-
-
 app.post('/whatever', (req, res) => {
     console.log(req.body)
     // todo: get what is in the body and send it back

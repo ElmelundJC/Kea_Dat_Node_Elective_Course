@@ -2,19 +2,10 @@ const express = require("express");
 const app = express();
 
 app.use(express.static('public'));
-// app.use(express.static('public/index'));
-// app.use(express.static('public/weeks'));
-
-
-
 
 app.get('/', (req, res) => { 
     res.sendFile(__dirname + '/public/index/welcome.html');
 });
-
-// app.get('/welcome', (req, res) => {
-//     res.sendFile(__dirname + '/public/index/welcome.html');
-// });
 
 app.get('/first', (req, res) => {
     res.sendFile(__dirname + '/public/weeks/first/week1.html');

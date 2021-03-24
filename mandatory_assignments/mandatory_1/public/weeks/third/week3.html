@@ -8,10 +8,83 @@
     <link rel="stylesheet" href="./weeks/third/week3.css">
 </head>
 <body>
-    
     <div class="topnav">
         <a href="/">Index</a>
+        <a href="https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course/tree/main/hand_in_assignments/3._time-day-month_endroutes">3rd hand-in</a>
     </div>
-    
+    <div class="nodemonImage">
+        <img src="./../images/nodemonLogo.png" alt="">
+    </div>
+    <h1>Third Weeks Documentation</h1>
+
+<section>
+    <h3>JavaScript</h3>
+    <h4>Variables:</h4>
+    <ul>
+        <li>const: A constant variable that is immutable</li>
+        <li>let: A mutable variable (Better and newer version than var)</li>
+        <li>var: A mutable variable, but behaves different than let.(Stop using var!)</li>
+        <li><span><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">MDN - for more information</a></span></li>
+    </ul>
+    <h4>Strict Mode</h4>
+    <ul>
+        <li>Definded befor use with: "use strict;" or "use strict";</li>
+        <li>Makes several changes to normal JavaScript semantics... </li>
+        <li><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN - for more information</a></span></li>
+    </ul>
+    <h4>Scope</h4>
+    <ul>
+        <li>Scopes is what is defined inside { }</li>
+    </ul>
+
+    <h4>Type Coercion</h4>
+    <ul>
+        <li>Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers)</li>
+        <dd>
+            <br> 
+            Example: <br>
+            <span>const value1 = '5'; <br>
+            const value2 = 9; <br>
+            let sum = value1 + value2; <br>
+            <br> 
+            console.log(sum); --> 59 </span><br>
+            <br>
+        </dd>
+        <li> As seen in the example above javaScript has coerced the 9 from a number into a string and then concatenated the two values together. <br></li>
+        <br>
+        <dd><span>sum = Number(value1) + value2</span></dd>
+        <br>
+        <li>Therefor use the method Number() to convert the string value into a number.</li>
+        <li><span><a href="https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion">MDN - for more information</a></span></li>
+    </ul>
+</section>
+<section>
+    <h3>Node Package Manager - npm</h3>
+    <ul>
+        <p>Npm is two things:</p>
+        <li>First and foremost, it is an online repository for the publishing of open-source Node.js projects</li>
+        <li>Second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management.</li>
+
+        <p>A plethora of Node.js libraries and applications are published on npm, and many more are added every day. These applications can be searched for on https://www.npmjs.com/. Once you have a package you want to install, it can be installed with a single command-line command.
+        <br>
+        Let's say you're hard at work one day, developing the Next Great Application. You come across a problem, and you decide that it's time to use that cool library you keep hearing about - let's use Caolan McMahon's async as an example. Thankfully, npm is very simple to use: you only have to run npm install async, and the specified module will be installed in the current directory under ./node_modules/. Once installed to your node_modules folder, you'll be able to use require() on them just like they were built-ins.</p>
+        <li><span><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">nodejs.org - for more information</a></span></li>
+    </ul>
+    <h3>Express</h3>
+    <ul>
+        <p>Express is one of the most popular Node web framework, and is the underlying library for a number of other popular Node web frameworks. It provides mechanisms to:</p>
+        <li>Write handlers for requests with different HTTP verbs at different URL paths (routes).</li>
+        <li>Integrate with "view" rendering engines in order to generate responses by inserting data into templates.</li>
+        <li>Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.</li>
+        <li>Add additional request processing "middleware" at any point within the request handling pipeline.</li>
+        <li><span><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">MDN</a> or <a href="https://expressjs.com/">expressjs.com</a></span></li>
+    </ul>
+    <h3>Nodemon</h3>
+    <ul>
+        <p>Nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+        nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.</p>
+    </ul>
+</section>
 </body>
 </html>

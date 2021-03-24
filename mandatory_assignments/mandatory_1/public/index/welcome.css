@@ -10,6 +10,13 @@
 	font-weight: 800;
 }
 
+.topnav {
+	border-bottom: 2px solid #b6b4b4;
+	width: 100%;
+	margin-left: 10%/6;
+	padding: 10px 0 10px 0;
+}
+
 h1 a {
 	color: black;
 }

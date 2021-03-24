@@ -10,8 +10,53 @@
 <body>
     <div class="topnav">
         <a href="/">Index</a>
+        <a href="https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course/tree/main/hand_in_assignments/4._complete_CRUD_API">4th hand-in</a>
     </div>
+    <div class="nodemonImage">
+        <img src="./../images/nodemonLogo.png" alt="">
+    </div>
+    <h1>Fourth Weeks Documentation</h1>
 
+    <section>
+        <h3>JavaScript</h3>
+        <h4>Loops</h4>
+        <ul>
+            <li>map</li>
+            <li>filter</li>
+            <li>reduce</li>
+            <li>find</li>
+            <li>etc.</li>
+        </ul>
+        <p>For Loops we have been talking about maps, and gotten an example of how to loop through a map.</p>
+        <p>Example: <br>
+        <br>
+        <span>const fruits = ["apples", "banana", "blueberries"];</span><br>
+        <br>
+        using maps to loop through the array by doing:
+        <br>
+        <br>
+        <span>fruits.map(fruit => console.log(fruit));</span><br>
+        <br>
+        Also looping throug the array while adding data to the elements: <br>
+        <br>
+        <span>const copiedFruits = fruits.map((fruit, index) => { <br>
+            return { id: index + 1, fruit, delicious: "yes yes yes" }; <br>
+        }); <br>
+        console.log(copiedFruits);</span> <br>
+        </p>
+    </section>
+    <section>
+    <h3>Ways to send responses</h3>
+    <p>Through the lesson these are just a minor part of how we have learned to send data through res(responses)</p>
+    <img id="dataResponse" src="./../images/dataResponses.png" alt="">
+    </section>
+    <section>
+        <h3>The Anatomi of the URL</h3>
+        <img id="urlAnatomy" src="./../images/urlAnatomy.png" alt="">
+    </section>
+    <section>
+        <h3>Homework consisted of completing the CRUD API --> check the link in the nav!</h3>
+    </section>
     
 </body>
 </html>

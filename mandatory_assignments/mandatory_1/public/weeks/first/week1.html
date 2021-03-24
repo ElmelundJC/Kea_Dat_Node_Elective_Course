@@ -9,31 +9,80 @@
 <body>
     <div class="topnav">
         <a href="/">Index</a>
+        <a href="https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course/tree/main/hand_in_assignments/1._Intro_Exercises">1st hand-in</a>
+    </div>
+    <div class="nodemonImage">
+        <img src="./../images/nodemonLogo.png" alt="">
     </div>
 
 <h1>First Weeks Documentation</h1>
 
-<section id="container">
-    <div>JavaScript</div>
-
-    <div id="datatext">Different Datatypes</div>
-</section>
-
-
 <section>
-    <h3>NodeJS</h3>
+    <h3>JavaScript Basics</h3>
+    <h4>Different Datatypes:</h4>
+    <p>Primitives:</p>
+    <ul>
+        <li>Undefined - variable has not been assigned a value</li>
+        <li>Boolean - true or false</li>
+        <li>Number - integer, float, etc.</li>
+        <li>Null - value null</li>
+        <li>String - set of characters</li>
+        <li>Symbol - a unique and immutable primitive value</li>
+    </ul>
+    <p>Structural types:</p>
+    <ul>
+        <li>Object - allows you to store collections of data</li>
+        <li>Function - the function is a callable object that executes a block of code. Possible to be assigned to a variable.</li>
+        <li>Array - storing multiple values in a single variable</li>
+    </ul>
 
-    <p>nodeJS is a ...</p>
+    <p>In doubt what type you are working with... Just use the magic method typeof()</p>
+    <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">MDN - for more information</a></span>
+</section>
+<section>
+    <h3>What is NodeJS?</h3>
+    <p>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser.</p>
 
 </section>
-
+<br>
 <section>
     <h3>How do to create a node project</h3>
-
     <ol>
-        <li>Create package.json file</li>
-        <li>Define {} inside the package.json file</li>
-        <li>Run the command in terminal: "npm install" to create package-lock-</li>
+        <li>
+            Create package.json file
+        </li>
+        <li>
+            Define {} inside the package.json file, which tells that the file is of type JSON
+        </li>
+        <li>
+            Run the command in terminal: "npm install" to create package-lock-.json
+        </li>
+        <li>
+            Two possible ways:
+        </li>
+        <ul>
+            <li>
+                Inside package.json you should define your dependencies as key:value pair, and as the value you should define express and the version you would like to install to your project. Run the command in terminal: "npm install" to install the project and its dependencies. Inside the directory folder you should see a map called node_modules which is the express files and librarys are.
+            </li>
+            <li>
+                Or you could run the command in terminal: "npm install express", which does exactly the same as explained above
+            </li>
+        </ul>
+        <li>
+            Create app.js file
+        </li>
+        <li>
+            Inside app.js file, import the express library, & save the library in a variable & define what port the application should run on.
+            <dd>
+                <span>"const express = require("express");"</span>
+            </dd>
+            <dd>
+                <span>"const app = express();"</span>
+            </dd>
+            <dd>
+            <span>"app.listen(8080);"</span>
+            </dd>
+        </li>
     </ol>
 </section>
 

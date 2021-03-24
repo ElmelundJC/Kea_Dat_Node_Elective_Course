@@ -11,5 +11,19 @@
     <div class="topnav">
         <a href="/">Index</a>
     </div>
+    <div class="nodemonImage">
+        <img src="./../images/nodemonLogo.png" alt="">
+    </div>
+    <h1>Fifth Weeks Documentation</h1>
+
+    <h2>Serving HTML files with Express</h2>
+    <p>When building a webserver with express you will have to explicitly define what static files your application is allowed to send to the client upon request</p>
+    <p>By static files i am talking about html, css, images & javascript files.</p>
+
+    <p>A specific call like:    <span>app.use(express.static('public'));</span> 
+        should do the trick</p>
+
+    <p>Please consider this projects app.js file as being part of serving static files in Express. <span><a href="https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course/tree/main/mandatory_assignments/mandatory_1">Mandatory assignment 1</a></span></p>
+    <img id="staticExpress" src="./../images/servingHtml.png" alt="">
 </body>
 </html>
