@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Real-time Crypto Prices</h1>
+
+    <div">
+        <h3>Bitcoin</h3>
+        <p id="bitcoin-price"></p>
+    </div>
+
+    <div">
+        <h3>Ethereum</h3>
+        <p id="ethereum-price"></p>
+    </div>
+
+    <!-- User ajax to call https://api.coinlore.net/api/global/-->
+    <!-- Show the two fields btc_d and eth_d on the page-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        //anders metode med AJAX:
+        // Id 90 = bitcoin
+        // $.get("https://api.coinlore.net/api/ticker/?id=90", data => {
+        //     //console.log(data);
+        //     //Anders is from now on serving with DOM instead of jquery
+        //     const bitcoinParagraph = document.getElementById("bitcoin-price");
+        //     bitcoinParagraph.innerText = "$" + data[0].price_usd;
+        // });
+
+        // // id 80 = ethereum
+        // $.get("https://api.coinlore.net/api/ticker/?id=80", data => {
+        //     console.log(data);
+        //     const ethereumParagraph = document.getElementById("ethereum-price");
+        //     ethereumParagraph.innerText = "$" + data[0].price_usd;
+        // });
+
+        // $.get("/potato", (data) => {
+        //     console.log(data);
+        // }); // check the console for input. ajax kan også bruges på egen server.
+
+        // $ajax.({
+        //     url: "https://api.coinlore.net/api/ticker/?id=90"
+        // })
+
+
+        // using Promises --> fetch() to get the bitcound and ethereum prices on the page
+
+        // id 90 = BTC
+        fetch("https://api.coinlore.net/api/ticker/?id=90")
+        .then(response => response.json())
+        .then(result => {
+            console.log(result)
+            const bitcoinParagraph = document.getElementById("bitcoin-price");
+            bitcoinParagraph.innerText = "$" + result[0].price_usd;
+        });
+
+
+        // id 80 = ETH
+        // fetch("https://api.coinlore.net/api/ticker/?id=80")
+        // .then(res => res.json())
+        // .then(res => {
+        //     console.log(result);
+        //     const ethereumParagraph = document.getElementById("ethereum-price");
+        //     ethereumParagraph.innerText = "$" + res[0].price_usd;
+        // })
+
+        // try to convert the above with async/await
+        
+        (async function() {
+            const response = await fetch("https://api.coinlore.net/api/ticker/?id=80");
+            const ethereumResult = await response.json();
+            const ethereumParagraph = document.getElementById("ethereum-price");
+            ethereumParagraph.innerText = "$" + ethereumResult[0].price_usd;
+        })()
+
+    </script>
+
+
+</body>
+</html>
