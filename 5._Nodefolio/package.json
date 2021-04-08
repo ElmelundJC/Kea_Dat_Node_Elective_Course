@@ -1,0 +1,28 @@
+{
+  "name": "nodefolio",
+  "version": "0.0.1",
+  "description": "A personal portfolio project using Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course.git"
+  },
+  "keywords": [
+    "portfolio",
+    "Node",
+    "personal"
+  ],
+  "author": "Christian Jacobsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course/issues"
+  },
+  "homepage": "https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  }
+}

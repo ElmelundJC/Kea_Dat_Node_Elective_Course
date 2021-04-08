@@ -4,6 +4,13 @@ const app = express();
 // this line makes the folder public available for the client to see. In basic we are telling the application to send more than just the HTML-file. so the folder 'public' is getting send to the client aswell
 app.use(express.static('public'));
 
+const fetch = require("node-fetch");
+
+
+// fetch("https://www.google.com")
+// .then(res => res.text())
+// .then(body => console.log(body));
+
 
 
 app.get('/', (req, res) => {
@@ -40,6 +47,14 @@ app.get("/potato", (req, res) => {
 });
 
 
+app.get("/proxy", (req, res) => {
+    fetch("https://www.google.com")
+    .then(res => res.textConverted())
+    .then(body => res.send(body));
+
+})
+
+
 // process is working as our "main", env is the environment.
 // console.log(process.env.PORT);
 // use the environment variable if it's set otherwise use a fallback port
@@ -53,5 +68,5 @@ const server = app.listen(PORT, error => {
     console.log("Server is running on port:", server.address().port);
 });
 
-console.log(process.env.PORT)
-console.log(server.address().port)
+console.log(process.env.PORT);
+console.log(server.address().port);
