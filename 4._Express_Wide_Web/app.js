@@ -52,7 +52,7 @@ app.get("/proxy", (req, res) => {
     .then(res => res.textConverted())
     .then(body => res.send(body));
 
-})
+});
 
 
 // process is working as our "main", env is the environment.
