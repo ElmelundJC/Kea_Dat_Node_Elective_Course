@@ -2,8 +2,15 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // allows us to send/parse form-data
 
 app.use(express.static('public'));
+
+const projectsRoute = require("./routes/projects");
+const contactRouter = require("./routes/contact");
+
+app.use(projectsRoute.router);
+app.use(contactRouter.router);
 
 // SSR - Server side rendering
 // read the frontpage.html file
@@ -23,6 +30,7 @@ const frontpage = fs.readFileSync(__dirname + "/public/frontpage/frontpage.html"
 
 const project = fs.readFileSync(__dirname + "/public/projects/projects.html", "utf-8");
 
+const contact = fs.readFileSync(__dirname + "/public/contact/contact.html", "utf-8");
 
 app.get("/", (req, res) => {
     res.send(nav + frontpage + footer);
@@ -34,8 +42,8 @@ app.get("/projects", (req, res) => {
 
 
 
-app.get("contact", (req, res) => {
-    res.sendFile(__dirname + "/public/contactpage/contact.html")
+app.get("/contact", (req, res) => {
+    res.send(nav + contact + footer);
 });
 
 
