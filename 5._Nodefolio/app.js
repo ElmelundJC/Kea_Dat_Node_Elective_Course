@@ -21,6 +21,7 @@ app.use(contactRouter.router);
 // - async
 
 const fs = require("fs");
+const { get } = require("http");
 
 const nav = fs.readFileSync(__dirname + "/public/nav/nav.html", "utf-8");
 
@@ -32,15 +33,31 @@ const project = fs.readFileSync(__dirname + "/public/projects/projects.html", "u
 
 const contact = fs.readFileSync(__dirname + "/public/contact/contact.html", "utf-8");
 
+const about = fs.readFileSync(__dirname + "/public/about/aboutpage.html", "utf-8");
+
+const skills = fs.readFileSync(__dirname + "/public/skills/skillspage.html", "utf-8");
+
+const resume = fs.readFileSync(__dirname + "/public/resume/resumepage.html", "utf-8");
+
 app.get("/", (req, res) => {
     res.send(nav + frontpage + footer);
+});
+
+app.get("/about", (req, res) => {
+    res.send(nav + about + footer);
 });
 
 app.get("/projects", (req, res) => {
     res.send(nav + project + footer);
 });
 
+app.get("/skills", (req, res) => {
+    res.send(nav + skills + footer);
+});
 
+app.get("/resume", (req, res) => {
+    res.send(nav + resume + footer);
+});
 
 app.get("/contact", (req, res) => {
     res.send(nav + contact + footer);

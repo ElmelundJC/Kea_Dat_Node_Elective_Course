@@ -1,5 +1,20 @@
-#footer-about {
-	height: 10px;
+#footer-id {
 	display: flex;
 	justify-content: center;
+}
+
+#footer-id > * + * {
+	margin-left: 0.5em;
+}
+
+#footer-about {
+	display: inline-block;
+	margin-top: 2.5px;
+	margin-bottom: 0;
+}
+
+#icons-image {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
 }

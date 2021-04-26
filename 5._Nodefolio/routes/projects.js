@@ -20,6 +20,13 @@ const projects = [
         gitURL: "https://github.com/ElmelundJC/Kea_Dat_Node_Elective_Course.git/1/5._Nodefolio",
         images: [],
         technologiesInvolved: ["Node.js", "Html", "CSS"]
+    },
+    {
+        title: "Nordic Motorhome Rental",
+        description: "2nd semesters project working with java & spring framework",
+        gitURL: "",
+        images: [],
+        technologiesInvolved: ["Java", "Spring Framework", "HTML", "CSS"]
     }
 ];
 

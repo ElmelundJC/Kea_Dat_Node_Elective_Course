@@ -1,11 +1,22 @@
 #logo {
 	width: 50px;
+	padding-left: 10%;
 }
 
 #nav-right {
 	float: right;
+	padding-top: 0.5em;
+	padding-right: 10%;
 }
 
 #main-content {
 	min-height: calc(100vh - 125px);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-menu-item {
+	font-weight: bold;
 }
