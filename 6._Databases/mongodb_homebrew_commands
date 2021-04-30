@@ -1,0 +1,10 @@
+# To start the server --> 
+brew services start mongodb-community@4.4
+
+
+
+# to stop the server -->
+brew services stop mongodb-community@4.4
+
+
+# Use a seperate tap to run the command "mongo" in, from here you should connect to the databases.
