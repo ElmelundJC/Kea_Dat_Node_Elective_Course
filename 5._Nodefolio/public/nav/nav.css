@@ -1,12 +1,22 @@
 #logo {
 	width: 50px;
+	padding-top: 1%;
 	padding-left: 10%;
+}
+
+#navbar {
+	background-color: #e9e3e3;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	padding: 2px;
+	box-shadow: 5px 10px 8px 10px #888888;
 }
 
 #nav-right {
 	float: right;
-	padding-top: 0.5em;
-	padding-right: 10%;
+	padding-top: 1em;
+	padding-right: 5%;
 }
 
 #main-content {
@@ -18,5 +28,10 @@
 }
 
 .nav-menu-item {
+	padding-top: 2px;
+	font-size: 1.5em;
 	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	justify-content: row;
 }

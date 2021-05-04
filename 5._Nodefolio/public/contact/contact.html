@@ -1,24 +1,43 @@
 <div id="contact-info">
     <h1>Contact me here</h1>
 
-    <p>Telephone</p>
-    <p>Email</p>
 </div>
 
 <!-- Create a form that contains name, email, subject, input, button -->
 
 <form method="POST" action="/api/contact">
-    <label>Name</label>
-    <input type="text" name="name" placeholder="name">
-
-    <label>Email</label>
-    <input type="email" name="email" placeholder="email">
-
-    <label>Subject</label>
-    <input type="subject" name="subject" placeholder="subject">
-
-    <label>Message</label>
-    <textarea type="text" name="message" placeholder="text" rows="20" cols="50"></textarea>
-
+   
+    <input type="text" id="name" name="name" placeholder="name">
+    <br>
+    <input type="email" id="email" name="email" placeholder="email">
+    <br>
+    <input type="subject" id="subject" name="subject" placeholder="subject">
+    <br>
+    <textarea type="text" id="text" name="message" placeholder="text" rows="20" cols="50"></textarea>
+    <br>
     <button type="submit">Contact Me</button>
 </form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/contact/contact.js">
+    // $('form').on('submit', (e) => {
+    //     e.preventDefault(); // disable the default browser behaviour
+
+    //     const name =    $('#name').val().trim();
+    //     const email =   $('#email').val().trim();
+    //     const subject = $('#subject').val().trim();
+    //     const text =    $('#text').val().trim();
+
+    //     const data = {
+    //         name,
+    //         email,
+    //         subject,
+    //         text
+    //     }
+    //     // sender data via post til routen
+    //     // $.post('/api/contact', data, function() {
+    //     //     console.log('Server received our data!');
+    //     // });
+
+    // });
+</script> 

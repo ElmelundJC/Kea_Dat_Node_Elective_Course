@@ -63,6 +63,19 @@ app.get("/contact", (req, res) => {
     res.send(nav + contact + footer);
 });
 
+// app.post("/api/contact", (req, res) => {
+//     // TODO:
+//     // send mail here
+//     const { subject, email, text} = req.body;
+//     contactRouter.sendMail(email, subject, text, function(err, data) {
+//         if (err) {
+//             res.status(500).json({message: 'Internal Error'});
+//         } else {
+//             res.json({ message: "Email sent!!"});
+//         }
+//     });
+// });
+
 
 
 const server = app.listen(process.env.PORT || 8080, (error) => {
