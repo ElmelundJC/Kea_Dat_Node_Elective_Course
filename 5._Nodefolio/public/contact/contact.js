@@ -19,32 +19,7 @@
 //     $.post('/contact', data, function() {
 //         console.log('Server received our data!');
 //     });
-
-    
-
 // });
 
+// Ingen kode her er nødvendig, men dette var blot kun til test.
 
-// (async function getProjects() {
-//     const response = await fetch("/api/projects");
-//     const result = await response.json();
-    
-//     const projectsDiv = document.getElementById("projects");
-
-//     result.projects.map(project => {
-//         const projectDiv = document.createElement("div");
-
-//         const projectTitle = document.createElement("h2");
-//         projectTitle.classList.add("project-title");
-//         projectTitle.innerText = project.title;
-
-//         const projectDescription = document.createElement("p");
-//         projectDescription.classList.add("project-description");
-//         projectDescription.innerText = project.description;
-
-
-//         projectDiv.appendChild(projectTitle);
-//         projectDiv.appendChild(projectDescription);
-//         projectsDiv.appendChild(projectDiv);
-//     });
-// })();

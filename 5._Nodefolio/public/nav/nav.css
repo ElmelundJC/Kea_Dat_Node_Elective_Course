@@ -1,3 +1,7 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
 #logo {
 	width: 50px;
 	padding-top: 1%;
@@ -31,7 +35,4 @@
 	padding-top: 2px;
 	font-size: 1.5em;
 	font-weight: bold;
-	display: flex;
-	justify-content: space-between;
-	justify-content: row;
 }

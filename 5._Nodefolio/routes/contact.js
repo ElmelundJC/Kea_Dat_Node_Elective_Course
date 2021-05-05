@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 
 router.post("/api/contact", (req, res) => {
 
-
+// Til test :-)
      console.log(req.body.name);
      console.log(req.body.email);
      console.log(req.body.subject);
@@ -26,14 +26,13 @@ router.post("/api/contact", (req, res) => {
 
 // 2 of 3 mailOption, den data/form der skal sendes som mail.
         let mailOptions = {
-            name: req.body.name,
             from: req.body.email,
             to: 'culmelund@gmail.com',
             subject: req.body.subject,
-            text: req.body.message
+            text: `${req.body.email}::${req.body.name}::${req.body.message}`
         };
     
-    // Nodemailer virker også med Promise som vist under. alternativt ville være som udkommenteret kode.
+// 3 of 3 Nodemailer virker også med Promise som vist under. alternativt ville være som udkommenteret kode.
         transporter.sendMail(mailOptions) 
             .then(function(response) {
                 console.log('Email sent');
