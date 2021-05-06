@@ -5,8 +5,10 @@ const app = express();
 
 // to give Express some securety (helmet)
 import helmet from "helmet";
-
 app.use(helmet());
+
+import passwordUtil from "./util/passwordUtil.mjs"
+
 
 // ** from test.mjs
 // import { goodValue as myBetterName } from "./test.mjs";
@@ -27,6 +29,19 @@ How to get an external library in our HTML files
 
 // Works great with an authentication page or login system.. limit the access of a user on your page
 // it is smart because as a middleware it checks/runs/works before our routes
+
+import session from "express-session";
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
+
+/* Create a session route and set the router up with express */
+
+
+
 import rateLimit from "express-rate-limit";
 
 const basicLimiter = rateLimit({
@@ -52,7 +67,12 @@ const ipLogger = (req, res, next) => {
     next();
 }
 
-app.get("/", ipLogger,(req, res, next) => {
+app.use(ipLogger);
+
+import sessionRouter from "./routes/session.mjs";
+app.use(sessionRouter);
+
+app.get("/", (req, res, next) => {
     // res.send(`<h1>First</h1>`);
     console.log("it hits me... oh yeah");
     next();
@@ -70,6 +90,7 @@ app.get("/house/door", (req, res) => {
 app.get("/house/*", (req, res) => {
     res.send(`This house now features that.`);
 });
+
 
 app.get("/*", (req, res) => {
     res.status(404).send(`<h1>Sowwy.. the page you're looking for doesnt exist.</h1>`);
