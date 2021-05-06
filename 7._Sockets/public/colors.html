@@ -11,7 +11,9 @@
     <input id="color-picker" type="color">
     <button onclick="sendColor()">Send Color</button>
 
+    <div id="choosen-color"></div>
 
+   
 
     <script src="/socket.io/socket.io.js"></script>
     <script>    
@@ -28,7 +30,11 @@
 
         socket.on("changeColor", (data) => {
             document.body.style.backgroundColor = data.color;
-        });
+            // Never use innerHTML since u might get hacked with an attack xss cross-sight scripting
+            //document.getElementById("choosen-color").innerHTML = data.color;
+
+            document.getElementById("choosen-color").innerText = data.color;
+          });
 
     </script>
     
