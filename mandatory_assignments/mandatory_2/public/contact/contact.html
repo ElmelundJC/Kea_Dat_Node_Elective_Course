@@ -1,0 +1,43 @@
+<div id="contact-info">
+    <h1>Contact me here</h1>
+
+</div>
+
+<!-- Create a form that contains name, email, subject, input, button -->
+
+<form method="POST" action="/api/contact">
+   
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <br>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <br>
+    <input type="subject" id="subject" name="subject" placeholder="Subject" required>
+    <br>
+    <textarea type="text" id="text" name="message" placeholder="Some text..." rows="20" cols="50"></textarea>
+    <br>
+    <button type="submit">Contact Me</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/contact/contact.js">
+    // $('form').on('submit', (e) => {
+    //     e.preventDefault(); // disable the default browser behaviour
+
+    //     const name =    $('#name').val().trim();
+    //     const email =   $('#email').val().trim();
+    //     const subject = $('#subject').val().trim();
+    //     const text =    $('#text').val().trim();
+
+    //     const data = {
+    //         name,
+    //         email,
+    //         subject,
+    //         text
+    //     }
+    //     // sender data via post til routen
+    //     // $.post('/api/contact', data, function() {
+    //     //     console.log('Server received our data!');
+    //     // });
+
+    // });
+</script> 

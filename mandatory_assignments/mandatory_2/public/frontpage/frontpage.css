@@ -1,0 +1,11 @@
+#main-title {
+	margin-bottom: 1em;
+	font-size: 3em;
+}
+
+#quote {
+	margin-left: 25%;
+	margin-right: 25%;
+	font-weight: normal;
+	font-style: italic;
+}
