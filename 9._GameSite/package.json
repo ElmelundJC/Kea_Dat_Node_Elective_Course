@@ -1,0 +1,16 @@
+{
+  "name": "9._gamesite",
+  "version": "1.0.0",
+  "description": "A Gamesite using Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gamesite",
+    "luckywheel",
+    "Node"
+  ],
+  "author": "Christian Jacobsen",
+  "license": "MIT"
+}
